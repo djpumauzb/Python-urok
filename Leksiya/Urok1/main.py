@@ -1,9 +1,9 @@
 a = 1.89
 
-print(type(n))
+print(type(a))
 
 b = 'folder'
-print(type(n))
+print(type(a))
 c = 1245
 
 print(a, b, c)
