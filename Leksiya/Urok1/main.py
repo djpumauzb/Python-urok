@@ -1,8 +1,15 @@
-n = 1.89
+a = 1.89
 
 print(type(n))
 
-n = 'folder'
+b = 'folder'
 print(type(n))
-n1 = 'asdasd'
-print(n1)
+c = 1245
+
+print(a, b, c)
+print(a, " - ", b, " - ", c) # est eshe bolle ludshiy sposob :
+print(f"{a} - {b} - {c}") # vot ono )
+print("{} - {} - {}".format(a,b,c)) # eshe odin sposob )))
+
+# vvod dannix
+# py1
