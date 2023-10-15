@@ -16,6 +16,7 @@ n = 24 -> 4 16 4
 n = 60 -> 10 40 10 
 
 '''
+n = 6
 petya = n // 6
 sereja = petya
 katya = (petya + sereja) * 2
