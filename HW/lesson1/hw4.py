@@ -9,3 +9,11 @@
 a, b, c = 3, 2, 4 -> yes
 a, b, c = 3, 2, 1 -> no
 '''
+a = 3
+b = 2
+c = 4
+
+if c <= a * b:
+    print('yes')
+else:
+    print('no')
