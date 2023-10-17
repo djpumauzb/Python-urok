@@ -13,3 +13,14 @@
 n = 385916 -> yes
 n = 123456 -> no
 '''
+
+n = 123456
+n_str = str(n)
+
+pervaya_polovina =  int(n_str[0]) + int(n_str[1]) + int(n_str[2])
+vtoraya_polovina = int(n_str[3]) + int(n_str[4]) + int(n_str[5])
+
+if pervaya_polovina == vtoraya_polovina:
+    print('yes')
+else:
+    print('no')
