@@ -12,30 +12,30 @@ Input: 6 -> -20 30 -40 50 10 -10
 Output: 2
 '''
 import random
+
 diapasone = -50, 50
-elem = int(input("Vvedite chislo dney: "))
-def random_massiv (diapasone, elem_count):
+elem = int(input("Введите количество элементов: "))
+
+def random_massiv(diapasone, elem_count):
     massiv = []
     for i in range(elem_count):
-        random_range = random.randint(diapasone)
+        random_range = random.randint(diapasone[0], diapasone[1])
         massiv.append(random_range)
+    return massiv
 
-print(massiv)
+t = random_massiv(diapasone, elem)
+count = 0
+summ = 0
 
-
-
-# t = [-20, 30, -40, 50, 10, -10]
-# count = 0
-# summ = 0
-
-# for i in t:
-#     if i > 0:
-#         count += 1
-#     else:
-#         if count > summ:
-#             summ = count
-#         count = 0
-# print(max(count, summ))
+for i in t:
+    if i > 0:
+        count += 1
+    else:
+        if count > summ:
+            summ = count
+        count = 0
+print(t)
+print(max(count, summ))
 
         
 
