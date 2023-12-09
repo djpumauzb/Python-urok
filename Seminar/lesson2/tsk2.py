@@ -13,24 +13,29 @@ Output: 2
 '''
 import random
 diapasone = -50, 50
-def random_massiv (diapasone, count):
-    massiv = []
-    range = random.randint(diapasone)
-# nado dodelat'
-
 elem = int(input("Vvedite chislo dney: "))
-t = [-20, 30, -40, 50, 10, -10]
-count = 0
-summ = 0
+def random_massiv (diapasone, elem_count):
+    massiv = []
+    for i in range(elem_count):
+        random_range = random.randint(diapasone)
+        massiv.append(random_range)
 
-for i in t:
-    if i > 0:
-        count += 1
-    else:
-        if count > summ:
-            summ = count
-        count = 0
-print(max(count, summ))
+print(massiv)
+
+
+
+# t = [-20, 30, -40, 50, 10, -10]
+# count = 0
+# summ = 0
+
+# for i in t:
+#     if i > 0:
+#         count += 1
+#     else:
+#         if count > summ:
+#             summ = count
+#         count = 0
+# print(max(count, summ))
 
         
 
