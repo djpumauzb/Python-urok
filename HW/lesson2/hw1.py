@@ -1,11 +1,19 @@
 '''
-Na stole lejat "n" monetok. Nekotorie iz nix lejat vverx reshkoy,
-a nekotrorie  - gerbom. Opredelite minimalnoe chislo monetok, 
-kotorie nujno perevernut', chtobi vse monetki bili povernuti
-vverx odnoy i toy je storonoy. Vivedite minimalnoe kolichestvo monet,
-kotorie nujno pervernut'
+На столе лежат n монеток. Некоторые из монеток лежат вверх решкой, 
+а некоторые – гербом. Ваша задача - определить минимальное количество монеток, 
+которые нужно перевернуть, чтобы все монетки лежали одной и той же стороной вверх.
 
-5 -> 1 0 1 1 0
-2
+Входные данные:
+На вход программе подается список coins, где coins[i] равно 0,
+если i-я монетка лежит гербом вверх, и равно 1, если i-я монетка
+лежит решкой вверх. Размер списка не превышает 1000 элементов.
+
+Выходные данные:
+Программа должна вывести одно целое число - минимальное количество монеток, которые нужно перевернуть.
+
+Input:
+coins = [0, 1, 0, 1, 1, 0]
+Output:
+3
 '''
 
