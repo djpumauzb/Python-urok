@@ -13,3 +13,13 @@
 Input: 5 -> 5 1 6 5 9
 Output: 1 9
 '''
+n = int(input("Vvedite kol-vo arbuzov: "))
+min_m = None
+max_m = 0
+for i in range(n):
+    m = int(input("Vvedite massu arbiza: "))
+    if m < min_m:
+        min_m = m
+    elif m > max_m:
+        max_m = m
+print(min_m, max_m)
