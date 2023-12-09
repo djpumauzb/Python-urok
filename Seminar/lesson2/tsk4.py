@@ -11,5 +11,4 @@ i = 1
 while n > 0:
     i *= n  # (s = s * n)
     n -= 1  #(n = n - 1)
-
 print(i)
