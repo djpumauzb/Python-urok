@@ -16,4 +16,20 @@ coins = [0, 1, 0, 1, 1, 0]
 Output:
 3
 '''
-
+coins = [1, 1, 1, 1, 0]
+orel = 0
+reshka = 0
+if len(coins) > 1000:
+    print("Размер списка превышает 1000 элементов!")
+else:
+    for i in coins:     
+        if i == 1:
+            orel += 1
+        elif i == 0:
+            reshka += 1
+    if orel > reshka:
+        print(reshka)
+    elif reshka > orel:
+        print(orel)
+    elif orel == reshka:
+        print(orel)
