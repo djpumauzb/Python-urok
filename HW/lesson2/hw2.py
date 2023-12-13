@@ -15,3 +15,10 @@ p = 27
 Output: 
 3 9
 '''
+s = 12
+p = 27
+
+for x in range(1, 1001):
+    y = s - x
+    if x * y == p and x <= y:
+        print(f"{x} {y}")
