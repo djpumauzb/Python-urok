@@ -33,7 +33,7 @@ arr = [5, 8, 6, 4, 9, 2, 7, 3]
 19
 '''
 
-arr = [5, 8, 6, 4, 9, 2, 7, 3] #  где arr[i] (1 ≤ arr[i] ≤ 1000)
+arr = [5, 8, 6, 4, 9, 2, 7, 3]  # где arr[i] (1 ≤ arr[i] ≤ 1000)
 n = len(arr)
 max_harvest = 0
 
@@ -42,7 +42,6 @@ for i in range(1, n - 1):
     max_harvest = max(max_harvest, current_harvest)
 
 print(max_harvest)
-
 
 
 # gpt che :(
