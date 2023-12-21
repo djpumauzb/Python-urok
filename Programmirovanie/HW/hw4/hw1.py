@@ -25,11 +25,23 @@ Output:
 '''
 
 
-
-
-
-
-
 list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 min_number = 0
 max_number = 10
+
+list_length = len(list_1)
+
+for i in range(list_length):
+    value = list_1[i]
+    if min_number <= value <= max_number:
+        print(i)
+
+#  Better way
+list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+min_number = 0
+max_number = 10
+
+# Используем enumerate для получения и индекса, и значения элемента списка
+for index, value in enumerate(list_1):
+    if min_number <= value <= max_number:
+        print(index)
