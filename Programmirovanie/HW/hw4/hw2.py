@@ -14,6 +14,27 @@ Output:
 8
 11
 '''
+
 a1 = 2
 d = 3
 n = 4
+
+
+def arithmetic_progression(start, step, length):
+    count = start
+    for _ in range(1, length):
+        print(count)
+        count += step
+        if count == start + (length - 1) * step:
+            print(count)
+
+# Better version:
+
+
+def arithmetic_progression_upgrade(start: int, step: int, length: int) -> int:
+    for count in range(start, start + step * length, step):
+        print(count)
+
+
+arithmetic_progression(a1, d, n)
+arithmetic_progression_upgrade(a1, d, n)
