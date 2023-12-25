@@ -25,5 +25,30 @@
 
 from math import pi
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
-find_farthest_orbit = [i for i in orbits if i[0] != i[1] s = pi * i[0] * i[1]]
-print(*find_farthest_orbit(orbits))
+res = []
+max_S = 0
+for i in orbits:
+    if i[0] != i[1]:
+        S = pi * i[0] * i[1]
+        if S > max_S:
+            max_S = S
+            res.append(i)
+
+# Better way:
+
+def find_farthest_orbit(array: list):
+    res1 = [i for i in array if i[0] != i[1]]
+    res2 = max(map(lambda i: pi * i[0] * i[1], res1))
+    for i in res1:
+        if pi * i[0] * i[1] == res2:
+            return i
+print(find_farthest_orbit(orbits))
+
+
+# More better way:
+def find_farthest_orbit(array: list):
+    res1 = max(map(lambda i: pi * i[0] * i[1], [i for i in array if i[0] != i[1]]))
+    for i in orbits:
+        if pi * i[0] * i[1] == res1:
+            return i
+print(find_farthest_orbit(orbits))
