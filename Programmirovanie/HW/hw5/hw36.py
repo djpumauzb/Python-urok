@@ -21,6 +21,26 @@ Output:
 6   12  18  24  30  36  
 '''
 
-def print_operation_table(operation, num_rows=6, num_columns=6):
-    if num_columns < 2 or num_rows < 2:
+
+def print_operation_table(operation, num_rows=9, num_columns=9):
+    if num_rows < 2 or num_columns < 2:
         print('ОШИБКА! Размерности таблицы должны быть больше 2!')
+    else:
+        print(' '.join([str(i) for i in range(1, num_columns + 1)]))
+        for i in range(2, num_rows + 1):
+            row = [str(i)]
+            for j in range(2, num_columns + 1):
+                row.append(f'{operation(i, j)}')
+            print(' '.join(row))
+
+
+# Пример использования
+print_operation_table(lambda x, y: x + y, 4, 4)
+print()
+print_operation_table(lambda x, y: x - y, 5, 5)
+print()
+print_operation_table(lambda x, y: x / y, 4, 4)
+print()
+print_operation_table(lambda x, y: x * y)
+
+# fu :( daje GPT ne pomog :(
