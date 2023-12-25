@@ -44,3 +44,4 @@ print()
 print_operation_table(lambda x, y: x * y)
 
 # fu :( daje GPT ne pomog :(
+# better way:
