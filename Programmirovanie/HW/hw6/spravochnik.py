@@ -7,9 +7,7 @@ def add_contact(file):
     patronymic = input('Third name: ')
     phone_number = input('Phone number: ')
 
-    if not os.path.isfile(file):
-        with open(file, 'w', encoding='utf-8') as fd:
-            fd.write('ID,Last Name,First Name,Patronymic,Phone Number\n')  # Header
+
 
     contact_id = sum(1 for _ in open(file, 'r', encoding='utf-8'))
     with open(file, 'a', encoding='utf-8') as fd:
@@ -20,6 +18,9 @@ def add_contact(file):
 def get_contacts_from_file(file):
     with open(file, 'r', encoding='utf-8') as fd:
         contacts = fd.readlines()
+    if not os.path.isfile(file):
+        with open(file, 'w', encoding='utf-8') as fd:
+            fd.write('ID,Last Name,First Name,Patronymic,Phone Number\n')  # Header
     result = []
     for i, c in enumerate(contacts):
         lst = [str(i)]
