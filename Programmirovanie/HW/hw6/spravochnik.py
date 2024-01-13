@@ -16,11 +16,11 @@ def add_contact(file):
 
 
 def get_contacts_from_file(file):
-    with open(file, 'r', encoding='utf-8') as fd:
-        contacts = fd.readlines()
     if not os.path.isfile(file):
         with open(file, 'w', encoding='utf-8') as fd:
             fd.write('ID,Last Name,First Name,Patronymic,Phone Number\n')  # Header
+    with open(file, 'r', encoding='utf-8') as fd:
+        contacts = fd.readlines()
     result = []
     for i, c in enumerate(contacts):
         lst = [str(i)]
